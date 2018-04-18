@@ -40,6 +40,7 @@ public class SimpleHelloServlet2 extends HttpServlet {
         }
 
         String setHour = request.getParameter("hour");
+        setHour = (setHour.split(":"))[0];
         String salute = (Integer.parseInt(setHour) < 12) ?
                 "Good morning" : (Integer.parseInt(setHour) > 20) ? "Good night" : "Good afternoon";
 //
@@ -47,7 +48,7 @@ public class SimpleHelloServlet2 extends HttpServlet {
         if (messages.isEmpty()) {
             urlForward = "/custom-hello.jsp";
             messages.put("success", String
-                    .format("%s, your first name is %s and your last name is %s!", salute, fname, lname));
+                    .format("%s !<br />Your first name is %s and your last name is %s!", salute, fname, lname));
         }
 
         request.getRequestDispatcher(urlForward)

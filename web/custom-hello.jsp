@@ -9,10 +9,14 @@
 <html>
 <head>
     <title>Custom Hello</title>
+    <LINK rel="stylesheet" type="text/css"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <LINK rel="stylesheet" type="text/css"
+          href="css/style.css">
 </head>
 <body>
 
-    <span class="success">${messages.success}</span>
+    <h1>${messages.success}</h1>
 
 </body>
 </html>

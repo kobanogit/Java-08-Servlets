@@ -3,9 +3,11 @@
 <html lang="en">
 <head>
     <title>Formulaire</title>
-    <style>.error { color: red; } .success { color: green; }</style>
+    <%--<style>.error { color: red; } .success { color: green; }</style>--%>
     <LINK rel="stylesheet" type="text/css"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <LINK rel="stylesheet" type="text/css"
+          href="css/style.css">
 </head>
 <body>
 
@@ -24,7 +26,8 @@
         <span class="error">${messages.lname}</span><br>
         </p>
         <p>
-            <input type="hidden" name="hour" id="hourInput"><br>
+            <label for="fname">Hour : </label>
+            <input type="text" name="hour" id="hourInput"><br>
             <input type="submit" value="Submit">
         </p>
     </form>
@@ -32,7 +35,7 @@
     <script>
         var d = new Date();
         // var actualHour = d.getHours();
-        document.getElementById("hourInput").value = d.getHours();
+        document.getElementById("hourInput").value = d.getHours() + ":" + d.getMinutes();
     </script>
     <script type="text/javascript"
             src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
